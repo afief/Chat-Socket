@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "Chat Socket for Inmotion",
   "dependencies": {
-    "express": "^4.10.4"
+    "express": "^4.10.4",
+    "socket.io": "^1.2.1",
+    "node-sass": "^1.2.3"
   }
 }
