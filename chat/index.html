@@ -4,13 +4,38 @@
         <meta name="viewport" content="width=500, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="chat/scss/style.scss">
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="chat/scripts/jquery-1.11.1.min.js"></script>
+        <script src="chat/scripts/consoler.js"></script>
+        <script src="chat/scripts/main.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="main">
+            <div class="page" id="home">
+                <div class="wrapper">
+                    <form action="#" id="loginform">
+                        <h2>LOGIN</h2>
+                        
+                        <span>
+                            <i class="fa fa-user"></i>
+                            <input type="text" id="login_name" name="name" placeholder="username" required>
+                        </span>
+                        <span>
+                            <i class="fa fa-lock"></i>
+                            <input type="password" id="login_password" name="password" placeholder="password" required>
+                        </span>
+                        <span>
+                            <button id="btLogin">Login</button>
+                        </span>                        
+                        Not a member? <a href="#">Sign Up!</a>
+                    </form>
+                </div>
+            </div>
+            <div class="page" id="main">
                 <div class="wrapper">
                     <div class="chats">
-                        <ul>
+                        <ul id="chatlist">
                             <li>
                                 <div class="pic">
                                     <img src="assets/images/man.png" alt="">
@@ -25,48 +50,6 @@
                                     <div class="name">Afief</div>Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja.
                                     <div class="date">18 minutes ago</div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja</div>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja</div>
-                            </li>
-                            <li class="self">
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. </div>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja</div>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja</div>
-                            </li>
-                            <li class="self">
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. Pesan Boleh Diisi Apa aja. </div>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="assets/images/man.png" alt="">
-                                </div>
-                                <div class="message">Pesan Boleh Diisi Apa aja</div>
                             </li>
                         </ul>
                     </div>

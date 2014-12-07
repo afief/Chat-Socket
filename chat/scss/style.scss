@@ -2,6 +2,9 @@ $baseUrl : "../";
 $assetUrl: $baseUrl + "../assets/";
 $fontsUrl: $assetUrl + "fonts/";
 
+$linkcolor: #567AA9;
+$linkhover: #729DD5;
+
 @font-face {
     font-family: "Comic Neue Bold";
     src: url($fontsUrl + "ComicNeue-Bold.ttf");
@@ -23,20 +26,78 @@ $fontsUrl: $assetUrl + "fonts/";
     }
 }
 
+a {
+    color: $linkcolor;
+    &:hover {
+        color: $linkhover;
+    }
+}
+
 body {
     margin: 0px;
     padding: 0px;
 }
-.main {
+.container {
     width: 500px;
     margin: 0px auto;
+}
+.page {
+    width: 100%;
     background-color: #efefef;
     height: 100%;
+    .wrapper {
+        overflow-y: auto;
+    }
+    h2 {
+        font-family: "Comic Neue Bold";
+        color: #666;
+        text-align: center;
+        color: $linkcolor;
+    }
+    form {
+        display: block;
+        width: 300px;
+        margin: 0px auto;
+        font-family: "Comic Neue";
+        span {
+            display: flex;
+            background-color: #ddd;
+            border: solid 1px #ccc;
+            box-shadow: 0px 0px 3px -1px #aaa;
+            margin: 20px 0px;
+            i {
+                min-width: 15px;
+                padding: 15px 20px;
+                font-size: large;
+                background-color: #999;
+                color: white;
+            }
+            input, button {
+                background-color: white;
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 10px 20px;
+                color: #444;
+                font-family: "Comic Neue";
+            }
+            button {
+                background-color: $linkcolor;
+                color: white;
+                padding: 15px 20px;
+                cursor: pointer;
+                &:hover {
+                    background-color: $linkhover;
+                }
+            }
+        }
+    }
+}
+#main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     .wrapper {
-        overflow-y: auto;
         margin-bottom: 1px;
     }
     .chats {
@@ -92,6 +153,9 @@ body {
                         .name {
                             text-align: right;
                         }
+                        .date {
+                            text-align: right;
+                        }
                     }
                 }
             }
@@ -128,7 +192,20 @@ body {
 
 
 
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: transparent;
+}
 
+::-webkit-scrollbar-thumb {
+    background: #999;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
 
 
 
